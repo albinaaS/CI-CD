@@ -15,3 +15,14 @@ def parse_line(line:str) ->tuple:
 
     country_name = ' '.join(country_name).title()
     return country_name, area, population
+
+def total_by_population(file_path):
+    total = {}
+    with open(file_path, "r") as file:
+        for line in file:
+            country_name, _, population = parse_line(line)
+            if country_name in total:
+                total[country_name] += float(population)
+            else:
+                total[country_name] = float(population)
+    return total
