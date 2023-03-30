@@ -45,3 +45,13 @@ def write_file(file_path, total):
     with open(file_path, 'w') as file:
         for key, value in total.items():
             file.write(f'{key}: {value}\n')
+
+def main(input_file_path):
+    res = total_by_population(input_file_path)
+    print(sort_total(res))
+    write_file("files/out_population.txt", sort_total(res))
+    res = total_by_area(input_file_path)
+    print(sort_total(res))
+    write_file("files/out_area.txt", sort_total(res))
+
+main("files/text.txt")

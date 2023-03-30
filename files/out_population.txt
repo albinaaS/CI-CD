@@ -1,0 +1,10 @@
+Usa: 331000000.0
+France: 68000000.0
+Britain: 67000000.0
+Ukraine: 44000000.0
+Poland: 37000000.0
+Czechia: 11000000.0
+Greece: 10000000.0
+Austria: 9000000.0
+Georgia: 4000000.0
+Slovenia: 2000000.0
