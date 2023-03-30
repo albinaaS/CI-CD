@@ -40,3 +40,8 @@ def total_by_area(file_path):
 
 def sort_total(total):
     return dict(sorted(total.items(), key=lambda x: x[1], reverse=True))
+
+def write_file(file_path, total):
+    with open(file_path, 'w') as file:
+        for key, value in total.items():
+            file.write(f'{key}: {value}\n')
