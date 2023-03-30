@@ -26,3 +26,14 @@ def total_by_population(file_path):
             else:
                 total[country_name] = float(population)
     return total
+
+def total_by_area(file_path):
+    total = {}
+    with open(file_path, "r") as file:
+        for line in file:
+            country_name, area, _ = parse_line(line)
+            if country_name in total:
+                total[country_name] += float(area)
+            else:
+                total[country_name] = float(area)
+    return total
