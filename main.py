@@ -37,3 +37,6 @@ def total_by_area(file_path):
             else:
                 total[country_name] = float(area)
     return total
+
+def sort_total(total):
+    return dict(sorted(total.items(), key=lambda x: x[1], reverse=True))
