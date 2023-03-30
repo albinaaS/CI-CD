@@ -12,3 +12,11 @@ def test_parse_line_category():
 def test_parse_line_money() :
     _, _, population = parse_line("1 Ukraine 200km^2 40000000")
     assert population == 40000000
+
+def test_line_items_number():
+    with pytest.raises(ValueError):
+        parse_line("1 Ukraine")
+
+def test_line_items_number():
+    with pytest.raises (ValueError) :
+        parse_line("1 Ukraine -200km^2 40000000")
